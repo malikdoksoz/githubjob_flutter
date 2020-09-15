@@ -9,18 +9,8 @@ void main() {
   ));
 }
 
-class MyApp extends StatefulWidget {
-  MyApp({Key key}) : super(key: key);
-
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
