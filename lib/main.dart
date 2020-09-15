@@ -33,14 +33,14 @@ class MyApp extends StatelessWidget {
                       subtitle: Text(snapshot.data[index].company),
                     );
                   });
-            } else if (!snapshot.hasData) {
-              // data gelmezse
+            } else if (snapshot.connectionState != ConnectionState.done) {
+              return Center(child: CircularProgressIndicator());
+            } else {
               return AlertDialog(
                 content:
                     Text("Error: An error occurred while retrieving data.. "),
               );
             }
-            return Center(child: CircularProgressIndicator());
           },
         ),
       ),
